@@ -7,7 +7,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'is valid without a title' do
-    comment =  Comment.new(text: 'test', author_id: @user.id, post_id: @post.id)
+    comment = Comment.new(text: 'test', author_id: @user.id, post_id: @post.id)
     expect(comment).to_not be_valid
   end
 
