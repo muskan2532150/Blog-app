@@ -4,9 +4,9 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: 'post_id'
   has_many :likes, foreign_key: 'post_id'
 
-  validates :title, length: {minimum:2}
-  validates_numericality_of :comment_counter, :only_integer
-  validates_numericality_of :likes_counter, :only_integer
+  validates :title, length: {minimum:2},presence:true
+  validates_numericality_of :comment_counter, :only_integer, presence:true
+  validates_numericality_of :likes_counter, :only_integer, presence:true
 
   def update_posts_count
     author.increment!(:posts_counter)
