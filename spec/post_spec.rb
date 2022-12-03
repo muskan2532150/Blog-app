@@ -44,10 +44,10 @@ describe Post, User do
   end
 
   it 'Updates the posts counter' do
-    post = Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
-    post1 = Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
-    post2 = Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
-    post3 = Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
+    Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
+    Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
+    Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
+    Post.create(author: @user, title: 'Sakshi', comment_counter: 1, likes_counter: 1)
     expect(@user.posts_counter).to eq(4)
   end
 

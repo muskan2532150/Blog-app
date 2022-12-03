@@ -18,7 +18,7 @@ describe User do
     second_post = Post.create(author: first_user, title: 'Hello!', text: 'This is my first post')
     third_post = Post.create(author: first_user, title: 'Hello!!', text: 'This is my first post')
     fourth_post = Post.create(author: first_user, title: 'Hello!!!', text: 'This is my first post')
-    expect(user.three_recent_posts).to_not eq([first_post, second_post, third_post, first_post])
+    expect(user.three_recent_posts).to_not eq([first_post, second_post, third_post, fourth_post])
   end
 
   it 'is valid if name is string and post counter is integer' do
