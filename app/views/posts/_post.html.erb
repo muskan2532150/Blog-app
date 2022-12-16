@@ -1,0 +1,15 @@
+<div class="post">
+  <div class="post-body">
+    <h3>Post #<%= index+1 %> </h3>
+    <p> <%= post.title %> </p>
+  </div>
+  <div class="comments-likes">
+    Comments: 
+    <span class="comments-value"> 
+    <%= post.comment_counter %>
+    </span>, Likes: 
+    <span class="likes-value"> 
+    <%= post.likes_counter %> 
+    </span>
+  </div>
+</div>
