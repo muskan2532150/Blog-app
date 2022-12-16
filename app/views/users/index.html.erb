@@ -1,2 +1,7 @@
-<h1>users#index</h1>
-<p>Here is a All Post for users you are in '/users'</p>
+<section>
+<ul>
+<% @user.each do |users| %>
+<li> <%= render 'user',users:users %> </li>
+<% end %>
+</ul>
+</section>
