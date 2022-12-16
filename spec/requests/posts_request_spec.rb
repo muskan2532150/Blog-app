@@ -13,6 +13,10 @@ RSpec.describe 'Posts', type: :request do
     it 'should render index' do
       expect(response).to render_template(:index)
     end
+
+    it 'should include correct placeholder' do
+      expect(response.body).to include("Here are ALL Posts for a given user you are in '/users/user_id/posts")
+    end
   end
 
   describe 'GET /show' do
@@ -27,5 +31,10 @@ RSpec.describe 'Posts', type: :request do
     it 'should render show' do
       expect(response).to render_template(:show)
     end
+
+    it 'should include correct placeholder' do
+      expect(response.body).to include("Here is a single Post for a given user you are in '/users/user_id/posts/id")
+    end
+    
   end
 end
