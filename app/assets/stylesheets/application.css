@@ -54,10 +54,15 @@
 
  .bio-container {
     border: 2px solid #000;
-    margin-bottom: 10px;
     padding: 2rem;
+    margin: 0 4rem;
+    margin-bottom: .8rem;
+
   }
 
+  section > button{
+    margin-left: 40%;
+  }
 
 .bio {
     margin: 20px 0;
@@ -118,4 +123,8 @@
   .show-detail{
     line-height: 1.4;
   margin-bottom: 12px;
+  }
+
+  .post-index{
+    margin: 0 4rem;
   }

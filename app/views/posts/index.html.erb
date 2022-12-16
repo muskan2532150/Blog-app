@@ -1,6 +1,6 @@
 <section>
 <%= render "users/user", users:@user%>
-
+<div class="post-index">
 <%@post.each_with_index do |pt,index|%>
 <%= render 'posts/post', post:pt, index:index %>
 <div class="comments">
@@ -9,5 +9,6 @@
 <%end%>
 </div>
 <%end%>
+</div>
 <button> Pagination </button>
 </section>
