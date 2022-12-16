@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
-   before do 
-     get '/users/:user_id/posts/' 
-   end
-   
-     it 'returns http success' do
+    before do
+      get '/users/:user_id/posts/'
+    end
+
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -20,9 +20,9 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET /show' do
-   before do 
-     get '/users/:user_id/posts/:id'
-   end
+    before do
+      get '/users/:user_id/posts/:id'
+    end
 
     it 'returns http success' do
       expect(response).to have_http_status(:success)
@@ -35,6 +35,5 @@ RSpec.describe 'Posts', type: :request do
     it 'should include correct placeholder' do
       expect(response.body).to include("Here is a single Post for a given user you are in '/users/user_id/posts/id")
     end
-    
   end
 end
