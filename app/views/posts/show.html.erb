@@ -1,2 +1,17 @@
-<h1>Posts#show</h1>
-<p>Here is a single Post for a given user you are in '/users/user_id/posts/id'</p>
+<section class=pad>
+ <div class=border>
+    <div class="show-post">
+        <div class="user-name">Post by: <%=@post.author.name%></div>
+        <p class="comments-likes">Comments: <%=@post.comment_counter%>, Likes: <%=@post.likes_counter%></p>
+      </div>
+      <div class="show-detail">
+        <%=@post.text%>
+      </div>
+    </div>
+    <div class="comments">
+        <% @post.comments.each do |comment| %>
+          <%= render 'comment', comment: comment %>
+        <% end %>
+    </div>
+ </div>
+ </section>
