@@ -22,8 +22,25 @@ li {
   list-style: none;
 }
 
-.card {
+.margin {
+  margin: 0 4rem;
+}
+
+.border {
+  border: 2px solid #000;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.display{
   display: flex;
+}
+
+.col{
+  flex-direction: column;
+}
+
+.card {
   justify-content: space-evenly;
   padding: 2rem;
 }
@@ -55,7 +72,6 @@ li {
 .bio-container {
   border: 2px solid #000;
   padding: 2rem;
-  margin: 0 4rem;
   margin-bottom: 0.8rem;
 }
 
@@ -67,23 +83,19 @@ section > button {
   margin: 20px 0;
 }
 
-.posts,
-.posts-comments {
-  display: flex;
-  flex-direction: column;
-}
-
 .post {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000;
-  padding: 0.5rem;
+  margin-bottom: 0;
 }
 
 .btn {
   padding: 8px 15px;
   align-self: center;
   text-decoration: none;
+  color: black;
+}
+
+.btn:hover{
+  color: gray;
 }
 
 .comments-likes {
@@ -92,18 +104,6 @@ section > button {
 
 .post-comments {
   margin-bottom: 20px;
-}
-
-.comments {
-  border: 1px solid #000;
-  padding: 5px;
-  margin-bottom: 0.5rem;
-}
-
-.border {
-  border: 2px solid;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
 }
 
 .pad {
@@ -121,8 +121,4 @@ section > button {
 .show-detail {
   line-height: 1.4;
   margin-bottom: 12px;
-}
-
-.post-index {
-  margin: 0 4rem;
 }
