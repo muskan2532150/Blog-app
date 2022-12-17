@@ -8,7 +8,7 @@
         <%=@post.text%>
       </div>
     </div>
-    <div class="comments">
+    <div class="border">
         <% @post.comments.each do |comment| %>
           <%= render 'comment', comment: comment %>
         <% end %>

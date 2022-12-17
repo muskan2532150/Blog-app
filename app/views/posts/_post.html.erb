@@ -1,7 +1,7 @@
-<div class="post">
+<div class="post margin border display col">
   <div class="post-body">
     <h3>Post #<%= index+1 %> </h3>
-    <p> <%= post.title %> </p>
+    <p> <%= link_to post.title, user_post_path(@user,post), class: "btn" %> </p>
   </div>
   <div class="comments-likes">
     Comments: 

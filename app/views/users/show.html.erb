@@ -1,13 +1,13 @@
 <section>
 <%= render "user", users:@user%>
 
-<div class="bio-container">
+<div class="bio-container margin">
 <h3 class="bio">Bio</h3>
 <p><%= @user.bio%></p>
+</div>
 <%@user.three_recent_posts.each_with_index do |pt,index|%>
 <%= render 'posts/post', post:pt, index:index %>
 <%end%>
-</div>
 <button><%= link_to 'See All Posts', user_posts_path(@user), class: 'btn' %>
 </button>
 </section>

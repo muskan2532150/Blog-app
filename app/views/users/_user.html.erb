@@ -1,6 +1,6 @@
-<div class="card"> <%= image_tag (users.photo)%>
+<div class="card display"> <%= image_tag (users.photo)%>
   <div class="card-body">  
-    <p><%= users.name %> </p>
+    <p><%= link_to users.name , users, class: "btn"  %> </p>
     <p>Number of posts: <%= users.posts_counter%> </p> 
     </div>
 </div>
