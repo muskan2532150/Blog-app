@@ -75,7 +75,8 @@ li {
   margin-bottom: 0.8rem;
 }
 
-section > button {
+section > button,
+.like-btn {
   margin-left: 40%;
 }
 
