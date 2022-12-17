@@ -30,5 +30,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text).merge(author_id: current_user.id, comment_counter: 0, likes_counter: 0)
   end
-
 end

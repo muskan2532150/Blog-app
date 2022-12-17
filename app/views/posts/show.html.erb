@@ -14,6 +14,8 @@
         <% end %>
     </div>
  </div>
+ <div class="like-btn">
  <%=render 'likes/new' %>
- <button><%= link_to 'Add a comment', new_user_post_comment_path(@user.id,@post.id) %></button>
+ </div>
+ <button><%= link_to 'Add a comment', new_user_post_comment_path(@user.id,@post.id) , class: "btn" %></button>
  </section>

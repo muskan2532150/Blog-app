@@ -4,8 +4,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post= Post.find(params[:post_id])
-    @comment = Comment.new(author_id: current_user.id, post_id:post.id,**comment_params)
+    post = Post.find(params[:post_id])
+    @comment = Comment.new(author_id: current_user.id, post_id: post.id, **comment_params)
 
     respond_to do |format|
       format.html do
