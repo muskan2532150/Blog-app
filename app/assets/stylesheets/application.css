@@ -32,11 +32,11 @@ li {
   padding: 0.5rem;
 }
 
-.display{
+.display {
   display: flex;
 }
 
-.col{
+.col {
   flex-direction: column;
 }
 
@@ -94,7 +94,7 @@ section > button {
   color: black;
 }
 
-.btn:hover{
+.btn:hover {
   color: gray;
 }
 
