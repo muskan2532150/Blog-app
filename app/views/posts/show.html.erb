@@ -14,5 +14,6 @@
         <% end %>
     </div>
  </div>
+ <%=render 'likes/new' %>
  <button><%= link_to 'Add a comment', new_user_post_comment_path(@user.id,@post.id) %></button>
  </section>
