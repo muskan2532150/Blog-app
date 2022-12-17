@@ -1,0 +1,15 @@
+<div class="post margin border display col">
+  <div class="post-body">
+    <h3>Post #<%= index+1 %> </h3>
+    <p> <%= link_to post.title, user_post_path(@user,post), class: "btn" %> </p>
+  </div>
+  <div class="comments-likes">
+    Comments: 
+    <span class="comments-value"> 
+    <%= post.comment_counter %>
+    </span>, Likes: 
+    <span class="likes-value"> 
+    <%= post.likes_counter %> 
+    </span>
+  </div>
+</div>
