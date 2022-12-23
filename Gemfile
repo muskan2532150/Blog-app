@@ -79,3 +79,9 @@ group :development, :test do
   gem 'rspec-rails', '>= 3.9.0'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
+
+gem 'bullet', group: 'development'
+
+group :development, :test do
+  gem 'database_cleaner'
+end

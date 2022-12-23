@@ -4,7 +4,7 @@
 <%@post.each_with_index do |pt,index|%>
 <%= render 'posts/post', post:pt, index:index, user:@user.id %>
 <div class="border margin">
-<%pt.five_recent_comments.each do |comment|%>
+<%pt.five_recent_comments.includes([:author]).each do |comment|%>
 <%= render 'posts/comment', comment:comment %>
 <%end%>
 </div>
