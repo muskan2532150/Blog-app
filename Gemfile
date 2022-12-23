@@ -79,3 +79,8 @@ group :development, :test do
   gem 'rspec-rails', '>= 3.9.0'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
+
+gem 'devise'
+gem 'letter_opener'
+gem 'bootstrap', '~> 5.2.2'
+gem 'jquery-rails'
