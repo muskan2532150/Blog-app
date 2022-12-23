@@ -83,5 +83,5 @@ end
 gem 'bullet', group: 'development'
 
 group :development, :test do
-  gem "database_cleaner"
+  gem 'database_cleaner'
 end

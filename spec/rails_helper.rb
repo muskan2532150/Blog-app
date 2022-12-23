@@ -46,7 +46,6 @@ RSpec.configure do |config|
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 
-  
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
@@ -59,7 +58,7 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :truncation
   end
 
-   # This block must be here, do not combine with the other `before(:each)` block.
+  # This block must be here, do not combine with the other `before(:each)` block.
   # This makes it so Capybara can see the database.
   config.before(:each) do
     DatabaseCleaner.start
