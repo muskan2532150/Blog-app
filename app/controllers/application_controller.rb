@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
   # end
   before_action :authenticate_user!
   before_action :update_allowed_parameters, if: :devise_controller?
-  
+
   protected
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     users_path
   end
 
@@ -17,5 +17,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :bio, :email, :password, :password_confirmation, :current_password)
     end
   end
-
 end

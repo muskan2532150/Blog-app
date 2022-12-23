@@ -80,7 +80,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
 
-gem 'devise'
-gem 'letter_opener'
 gem 'bootstrap', '~> 5.2.2'
+gem 'devise'
 gem 'jquery-rails'
+gem 'letter_opener'
