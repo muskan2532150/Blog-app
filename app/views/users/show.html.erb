@@ -1,13 +1,14 @@
 <section>
-<%= render "user", users:@user%>
-
-<div class="bio-container margin">
-<h3 class="bio">Bio</h3>
-<p><%= @user.bio%></p>
-</div>
-<%@user.three_recent_posts.each_with_index do |pt,index|%>
-<%= render 'posts/post', post:pt, index:index %>
-<%end%>
-<button><%= link_to 'See All Posts', user_posts_path(@user), class: 'btn' %>
-</button>
+   <%= render "user", users:@user%>
+   <div class="bio-container margin">
+     <h3 class="bio">Bio</h3>
+     <p class="fs-4"><%= @user.bio%></p>
+   </div>
+   <%@user.three_recent_posts.each_with_index do |pt,index|%>
+      <%= render 'posts/post', post:pt, index:index %>
+   <%end%>
+   <div class="text-center">
+     <button class="btn btn-outline-dark mt-2"><%= link_to 'See All Posts', user_posts_path(@user), class: "text-decoration-none text-dark fs-4 text-center" %>
+     </button>
+   </div>
 </section>

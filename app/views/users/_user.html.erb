@@ -1,6 +1,7 @@
-<div class="card display">
-  <div class="card-body">  
-    <p><%= link_to users.name , user_path(users), class: "btn"  %> </p>
+<div class="cards display">
+<%= image_tag (users.photo)%>
+  <div class="cards-body">  
+    <p><%= link_to users.name , user_path(users), class: "btn fs-1"  %> </p>
     <p>Number of posts: <%= users.posts_counter%> </p> 
     </div>
 </div>

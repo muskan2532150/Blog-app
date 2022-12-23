@@ -1,15 +1,17 @@
 <section>
-<%= render "users/user", users:@user%>
-<div class="margin">
-<%@post.each_with_index do |pt,index|%>
-<%= render 'posts/post', post:pt, index:index, user:@user.id %>
-<div class="border margin">
-<%pt.five_recent_comments.each do |comment|%>
-<%= render 'posts/comment', comment:comment %>
-<%end%>
-</div>
-<%end%>
-</div>
-<button> Pagination </button>
-<button><%= link_to 'Add a post', new_user_post_path , class: "btn" %></button>
+  <%= render "users/user", users:@user%>
+  <div class="margin">
+    <%@post.each_with_index do |pt,index|%>
+    <%= render 'posts/post', post:pt, index:index, user:@user.id %>
+    <div class="margin">
+      <%pt.five_recent_comments.each do |comment|%>
+      <%= render 'posts/comment', comment:comment %>
+      <%end%>
+    </div>
+    <%end%>
+  </div>
+  <div class="text-center">
+    <button class="btn fs-4 btn-outline-dark mb-2"> Pagination </button><br>
+    <button class="btn fs-4 btn-outline-dark"><%= link_to 'Add a post', new_user_post_path, class:"text-decoration-none text-dark fs-4" %></button>
+  </div>
 </section>
